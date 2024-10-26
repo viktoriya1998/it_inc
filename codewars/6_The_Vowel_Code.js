@@ -13,7 +13,7 @@ function encode(string) {
 function decode(string) {
   const regex = new RegExp(
     Array.from({ length: lettersForChange.length }, (_, i) => i).join('|'),
-    'g'
+    'g',
   );
 
   return string.replace(regex, (match) => {
