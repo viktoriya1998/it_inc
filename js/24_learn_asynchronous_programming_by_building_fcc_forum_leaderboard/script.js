@@ -70,6 +70,15 @@ const viewCount = (views) => {
   return views;
 };
 
+const avatars = (posters, users) => {
+  return posters.map((poster) => {
+    const user = users.find((user) => user.id === poster.user_id);
+
+    if (user) {
+    }
+  });
+};
+
 const fetchData = async () => {
   try {
     const res = await fetch(forumLatest);
@@ -94,7 +103,7 @@ const showLatestPosts = (data) => {
     <tr>
       <td>
         <p class="post-title">${title}</p>
-
+${forumCategory(category_id)}
       </td>
       <td></td>
       <td>${posts_count - 1}</td>
